@@ -1,0 +1,140 @@
+{
+  "name": "keymap",
+  "displayName": "Custom Keymap",
+  "description": "Custom vim-like keybindings",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "keymap.toggleMode",
+        "title": "Toggle Navigation Mode"
+      },
+      {
+        "command": "keymap.moveLeft",
+        "title": "Move Left"
+      },
+      {
+        "command": "keymap.moveDown",
+        "title": "Move Down"
+      },
+      {
+        "command": "keymap.moveUp",
+        "title": "Move Up"
+      },
+      {
+        "command": "keymap.moveRight",
+        "title": "Move Right"
+      },
+      {
+        "command": "keymap.moveLineStart",
+        "title": "Move to Line Start"
+      },
+      {
+        "command": "keymap.moveLineEnd",
+        "title": "Move to Line End"
+      },
+      {
+        "command": "keymap.moveWordForward",
+        "title": "Move Word Forward"
+      },
+      {
+        "command": "keymap.moveWordBackward",
+        "title": "Move Word Backward"
+      },
+      {
+        "command": "keymap.newLineBelow",
+        "title": "New Line Below"
+      },
+      {
+        "command": "keymap.newLineAbove",
+        "title": "New Line Above"
+      },
+      {
+        "command": "keymap.toggleShift",
+        "title": "Toggle Shift Selection"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "keymap.toggleMode",
+        "key": "ctrl+;",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "keymap.moveLeft",
+        "key": "h",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveDown",
+        "key": "j",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveUp",
+        "key": "k",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveRight",
+        "key": "l",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveLineStart",
+        "key": "y",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveLineEnd",
+        "key": "u",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.toggleShift",
+        "key": "v",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveWordForward",
+        "key": "w",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.moveWordBackward",
+        "key": "b",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.newLineBelow",
+        "key": "o",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      },
+      {
+        "command": "keymap.newLineAbove",
+        "key": "shift+o",
+        "when": "editorTextFocus && keymap:mode == 'normal'"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/node": "20.x",
+    "typescript": "^5.7.2"
+  }
+}
