@@ -1,5 +1,6 @@
 {
-  "name": "keymap",
+  "name": "keymap-ssam0419",
+  "publisher": "SSam0419",
   "displayName": "Custom Keymap",
   "description": "Custom vim-like keybindings",
   "version": "0.0.1",
